@@ -38,6 +38,51 @@ h1{
 人の感情や社会について学ぶことに興味があります。<br>
 将来は世界で活躍できる人になりたいです。
 </p>
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>おみくじ</title>
+
+<style>
+body{
+    text-align:center;
+    font-family:sans-serif;
+    background:#f2f2f2;
+    margin-top:100px;
+}
+
+button{
+    font-size:20px;
+    padding:10px 20px;
+}
+
+#result{
+    margin-top:30px;
+    font-size:30px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>今日のおみくじ</h1>
+
+<button onclick="omikuji()">おみくじを引く</button>
+
+<p id="result"></p>
+
+<script>
+function omikuji(){
+    let fortunes = ["大吉","中吉","小吉","吉","末吉","凶"];
+    let random = Math.floor(Math.random()*fortunes.length);
+    document.getElementById("result").textContent = fortunes[random];
+}
+</script>
+
+</body>
+</html>
 
 </div>
 
